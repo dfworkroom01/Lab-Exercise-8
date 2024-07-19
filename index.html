@@ -18,7 +18,6 @@
         height: 60%;
       }
 
-      /* Clear floats after the columns */
       .row:after {
         content: "";
         display: table;
@@ -36,8 +35,12 @@
         padding: 20px;
         text-align: center;
       }
+      p.thick {
+        font-family: Tahoma;
+        font-weight: bold;
+      }
     </style>
-
+    <link rel="stylesheet" href="textGlow.css" />
     <link rel="stylesheet" href="buttonGroup.css" />
     <style>
       body {
@@ -76,8 +79,12 @@
           </button>
         </div>
         <h2 style="color: white">Player 1, you've got:</h2>
-        <p id="p1" style="color: white"></p>
-        <image style="position:relative; top: 250px; left: 500px;" src="3D dice.gif" alt="3D dice"></image>
+        <p id="p1" style="color: white" class="glow"></p>
+        <image
+          style="position: relative; top: 250px; left: 500px"
+          src="3D dice.gif"
+          alt="3D dice"
+        ></image>
       </div>
       <div class="column" style="background-color: rgb(4, 63, 49)">
         <div class="btn-group" role="group">
@@ -101,7 +108,7 @@
           </button>
         </div>
         <h2 style="color: white">Player 2, you've got:</h2>
-        <p id="p2" style="color: white"></p>
+        <p id="p2" style="color: white" class="glow"></p>
       </div>
     </div>
   </body>
