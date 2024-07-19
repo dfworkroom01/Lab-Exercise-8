@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dice Generator for devsInc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="rollDice.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 60%;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      /* Style the header */
+      .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+
+    <link rel="stylesheet" href="buttonGroup.css" />
+    <style>
+      body {
+        background-color: rgb(4, 63, 49);
+      }
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Choose Your Dice and Play!</h1>
+    </div>
+    <div class="row">
+      <div class="column" style="background-color: rgb(4, 63, 49)">
+        <div class="btn-group" role="group">
+          <button
+            type="button"
+            onclick="document.getElementById('p1').innerHTML=rollDicea(1,6)"
+          >
+            Dice 6
+          </button>
+          <button
+            type="button"
+            onclick="document.getElementById('p1').innerHTML=rollDicea(1,10)"
+          >
+            Dice 10
+          </button>
+          <button
+            type="button"
+            onclick="document.getElementById('p1').innerHTML=rollDicea(1,12)"
+          >
+            Dice 12
+          </button>
+        </div>
+        <h2 style="color: white">Player 1, you've got:</h2>
+        <p id="p1" style="color: white"></p>
+        <image style="position:relative; top: 250px; left: 500px;" src="3D dice.gif" alt="3D dice"></image>
+      </div>
+      <div class="column" style="background-color: rgb(4, 63, 49)">
+        <div class="btn-group" role="group">
+          <button
+            type="button"
+            onclick="document.getElementById('p2').innerHTML=rollDicea(1,6)"
+          >
+            Dice 6
+          </button>
+          <button
+            type="button"
+            onclick="document.getElementById('p2').innerHTML=rollDicea(1,10)"
+          >
+            Dice 10
+          </button>
+          <button
+            type="button"
+            onclick="document.getElementById('p2').innerHTML=rollDicea(1,12)"
+          >
+            Dice 12
+          </button>
+        </div>
+        <h2 style="color: white">Player 2, you've got:</h2>
+        <p id="p2" style="color: white"></p>
+      </div>
+    </div>
+  </body>
+</html>
