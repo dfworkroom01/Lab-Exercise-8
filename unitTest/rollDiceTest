@@ -1,0 +1,14 @@
+//Function to roll the dice and produce a random result
+function rollDicea(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//To test if the result of the function will be between min 1 max (dice face) and will be randomzed
+
+
+for (let i = 0; i < 6; i++) console.log(rollDicea(1,6));
+
+//To test if the function will produce zero for the randomized numer result
+if(rollDicea(1,6)===0) {
+  throw new TypeError("Cannot produce 0");
+}
